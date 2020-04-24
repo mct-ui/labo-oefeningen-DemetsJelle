@@ -38,7 +38,7 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     height: 100%;
-    background-image: linear-gradient(#0A257D, #061649);
+    background-image: linear-gradient(to bottom right, #0A257D, #061649);
     background-attachment: fixed;
 }
 
@@ -152,12 +152,26 @@ blockquote * {
     line-height: inherit;
 }
 
-figcaption {
-    font-weight: 400;
-    font-size: 12px;
+figure {
+    position: relative;
+    float: left;
+  }
+
+  figcaption {
+    background-color: white;
+    color: black;
+    max-width: 200px;
+    font-size: 10px;
+    display: block;
+
+    position: absolute;
+    top: 4px;
+    right:8px;
+    padding:10px;
+    border-right:4px solid #0053FB;
     line-height: 16px;
-    margin-top: 8px;
-}
+    text-align: right;
+  } 
 
 hr {
     border: 0;
@@ -411,7 +425,9 @@ a:focus {
     line-height: 24px;
     display: block;
 }
+.c-figcaption{
 
+}
 
 
 .c-nav__link {
@@ -454,6 +470,26 @@ a:focus {
 .c-nav__link:focus{
     text-shadow: 0px 0px 10px #DBEDFF;
 }
+
+  /*
+      Component: CTA link
+      ---
+      Small cta link with custom animation
+  */
+
+.c-link-cta { 
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 24px;
+    padding:  16px 32px 16px 32px;
+    background-image: linear-gradient(to right ,#033AA7, #0053FB);
+    box-shadow: 0px 0px 5px #1195FF;
+    text-transform: uppercase;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+  }
 
 @media (min-width: 768px) {
     .c-nav {
